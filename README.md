@@ -40,6 +40,7 @@ src/
 - [x] Implemented Register page UI + required validation + API call + redirect to `/login`
 - [x] Improved Register error feedback for backend connectivity/CORS issues
 - [x] Implemented Login page UI + POST `/login` + redirect to `/dashboard`
+- [x] Implemented Dashboard page with balance check via GET `/check-balance`
 - [x] Verified build with `npm run build`
 - [x] Initialized Git repository and linked remote
 
@@ -58,6 +59,7 @@ npm run dev
 - 2026-02-24: Register page implemented with Tailwind form, required field validation, and `POST /register` flow.
 - 2026-02-24: Register page now shows explicit backend connectivity/CORS error when API is unreachable.
 - 2026-02-24: Login page implemented with Tailwind form, API integration, error handling, and dashboard redirect.
+- 2026-02-24: Dashboard page implemented with centered card, check balance action, and session-expired error handling.
 
 ## Rule For Next Steps
 
