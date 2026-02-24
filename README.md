@@ -37,6 +37,8 @@ src/
   - `/login`
   - `/dashboard`
 - [x] Created page skeletons: `Register`, `Login`, `Dashboard`
+- [x] Implemented Register page UI + required validation + API call + redirect to `/login`
+- [x] Improved Register error feedback for backend connectivity/CORS issues
 - [x] Verified build with `npm run build`
 - [x] Initialized Git repository and linked remote
 
@@ -52,6 +54,8 @@ npm run dev
 - 2026-02-24: Initial project scaffold and routing/API/Tailwind setup completed.
 - 2026-02-24: README updated with step-by-step completion checklist.
 - 2026-02-24: Git initialized on `main` and remote `origin` linked.
+- 2026-02-24: Register page implemented with Tailwind form, required field validation, and `POST /register` flow.
+- 2026-02-24: Register page now shows explicit backend connectivity/CORS error when API is unreachable.
 
 ## Rule For Next Steps
 
