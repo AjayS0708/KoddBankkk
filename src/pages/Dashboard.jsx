@@ -58,99 +58,90 @@ function Dashboard() {
   }
 
   return (
-    <div className="banking-shell relative min-h-screen overflow-hidden px-4 py-8 text-slate-100 md:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 px-4 py-8 md:px-8">
       {showConfetti ? (
         <Confetti width={windowSize.width} height={windowSize.height} />
       ) : null}
 
-      <div className="banking-grid-overlay" />
-
-      <div className="relative z-10 mx-auto w-full max-w-7xl">
-        <header className="glass-panel mb-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl px-6 py-4">
+      <div className="mx-auto w-full max-w-7xl">
+        <header className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:flex md:items-center md:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.24em] text-amber-300/90">
-              KodBank Private
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-700">
+              KodBank Classic
             </p>
-            <h1 className="font-display text-3xl text-white md:text-4xl">
-              Premium Banking Dashboard
+            <h1 className="font-display mt-1 text-3xl text-slate-800">
+              Banking Dashboard
             </h1>
           </div>
-          <div className="rounded-xl border border-white/20 bg-white/5 px-4 py-2">
-            <p className="text-xs uppercase tracking-[0.16em] text-slate-300">Today</p>
-            <p className="text-sm font-semibold text-white">{currentDate}</p>
+          <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2 md:mt-0">
+            <p className="text-xs uppercase tracking-[0.14em] text-slate-500">Today</p>
+            <p className="text-sm font-semibold text-slate-700">{currentDate}</p>
           </div>
         </header>
 
         <main className="grid gap-6 xl:grid-cols-12">
           <section className="space-y-6 xl:col-span-8">
-            <div className="glass-panel rounded-3xl p-6 md:p-7">
-              <p className="text-xs uppercase tracking-[0.22em] text-slate-300">
+            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-7">
+              <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
                 Primary Card
               </p>
-              <div className="credit-card mt-4 rounded-3xl p-6">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-white/70">
-                      KodBank Black
-                    </p>
-                    <p className="mt-2 font-display text-2xl text-white">VISA Signature</p>
-                  </div>
-                  <div className="chip" />
+              <div className="mt-4 rounded-3xl border border-blue-300 bg-gradient-to-br from-blue-700 to-indigo-700 p-6 text-white shadow-md">
+                <div className="flex items-center justify-between">
+                  <p className="text-sm font-semibold tracking-wide">KODBANK PLATINUM</p>
+                  <div className="h-8 w-12 rounded-md border border-white/60 bg-white/30" />
                 </div>
-                <p className="mt-8 text-2xl tracking-[0.22em] text-white">
-                  4387 2026 9090 7761
-                </p>
-                <div className="mt-7 flex items-end justify-between text-sm">
+                <p className="mt-8 text-2xl tracking-[0.18em]">4387 2026 9090 7761</p>
+                <div className="mt-8 flex justify-between text-sm">
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.18em] text-white/60">
+                    <p className="text-[10px] uppercase tracking-[0.16em] text-blue-100">
                       Card Holder
                     </p>
-                    <p className="mt-1 font-semibold text-white">AJAY SHARMA</p>
+                    <p className="font-semibold">AJAY SHARMA</p>
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.18em] text-white/60">
+                    <p className="text-[10px] uppercase tracking-[0.16em] text-blue-100">
                       Expires
                     </p>
-                    <p className="mt-1 font-semibold text-white">12/30</p>
+                    <p className="font-semibold">12/30</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="grid gap-4 md:grid-cols-3">
-              <article className="glass-panel rounded-2xl p-5">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-300">
+              <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <p className="text-xs uppercase tracking-[0.14em] text-slate-500">
                   Available Balance
                 </p>
-                <p className="mt-3 font-display text-3xl text-white">
+                <p className="font-display mt-3 text-3xl text-slate-800">
                   {balance !== null ? `₹${balance}` : '₹ --'}
                 </p>
               </article>
-              <article className="glass-panel rounded-2xl p-5">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-300">
+              <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <p className="text-xs uppercase tracking-[0.14em] text-slate-500">
                   Monthly Spend
                 </p>
-                <p className="mt-3 font-display text-3xl text-white">₹28,450</p>
+                <p className="font-display mt-3 text-3xl text-slate-800">₹28,450</p>
               </article>
-              <article className="glass-panel rounded-2xl p-5">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-300">
+              <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <p className="text-xs uppercase tracking-[0.14em] text-slate-500">
                   Rewards Points
                 </p>
-                <p className="mt-3 font-display text-3xl text-white">12,760</p>
+                <p className="font-display mt-3 text-3xl text-slate-800">12,760</p>
               </article>
             </div>
           </section>
 
           <section className="space-y-6 xl:col-span-4">
-            <div className="glass-panel rounded-3xl p-6">
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-300">
-                Secure Action
+            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+                Quick Action
               </p>
               <button
                 type="button"
                 onClick={handleCheckBalance}
                 disabled={isLoading}
-                className="premium-cta mt-4 w-full rounded-xl px-5 py-3 text-sm font-bold uppercase tracking-[0.13em] text-slate-900 transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-70"
+                className="mt-4 w-full rounded-xl bg-slate-800 px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {isLoading ? 'Checking...' : 'Check Balance'}
               </button>
@@ -158,32 +149,32 @@ function Dashboard() {
               <div
                 className={`mt-4 min-h-24 rounded-xl border px-4 py-3 text-sm ${
                   messageType === 'success'
-                    ? 'border-emerald-300/40 bg-emerald-500/10 text-emerald-100'
+                    ? 'border-emerald-300 bg-emerald-50 text-emerald-800'
                     : messageType === 'error'
-                      ? 'border-rose-300/35 bg-rose-500/10 text-rose-100'
-                      : 'border-white/12 bg-white/5 text-slate-200'
+                      ? 'border-rose-300 bg-rose-50 text-rose-700'
+                      : 'border-slate-200 bg-slate-50 text-slate-600'
                 }`}
               >
-                {message || 'Use this control to fetch your latest secured account balance.'}
+                {message || 'Click check balance to fetch your latest account balance.'}
               </div>
             </div>
 
-            <div className="glass-panel rounded-3xl p-6">
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-300">
+            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
                 Recent Activity
               </p>
-              <ul className="mt-4 space-y-3 text-sm">
-                <li className="activity-row">
+              <ul className="mt-4 space-y-3 text-sm text-slate-700">
+                <li className="flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
                   <span>ATM Withdrawal</span>
-                  <span className="text-rose-300">- ₹2,000</span>
+                  <span className="font-semibold text-rose-600">- ₹2,000</span>
                 </li>
-                <li className="activity-row">
+                <li className="flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
                   <span>Salary Credit</span>
-                  <span className="text-emerald-300">+ ₹85,000</span>
+                  <span className="font-semibold text-emerald-600">+ ₹85,000</span>
                 </li>
-                <li className="activity-row">
+                <li className="flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
                   <span>UPI Payment</span>
-                  <span className="text-rose-300">- ₹1,250</span>
+                  <span className="font-semibold text-rose-600">- ₹1,250</span>
                 </li>
               </ul>
             </div>
